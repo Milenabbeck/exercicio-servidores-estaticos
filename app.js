@@ -8,7 +8,7 @@ button.addEventListener('click', function () {
     })
     .then(function (data) {
         div.textContent = `Title: ${data[0].title}, Body: ${data[0].body}`
-        let listaOrdenada = "<ol>";
+        // let listaOrdenada = "<ol>";
 
         for (usuario in data) {
             
