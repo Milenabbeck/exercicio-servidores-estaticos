@@ -6,12 +6,8 @@ button.addEventListener('click', function () {
     .then(function (response) {
         return response.json();
     })
-    .then(function (data) {
-        div.textContent = `Title: ${data[0].title}, Body: ${data[0].body}`
-        // let listaOrdenada = "<ol>";
-
-        for (usuario in data) {
-            
-        }
+    .then(function (json) {
+        div.innerText = json.body;
+        // div.innerText = Json.stringfy(json, null, 0);
     })
 });
