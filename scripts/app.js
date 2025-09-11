@@ -2,13 +2,14 @@ let button = document.getElementById('btnUsers');
 let div = document.getElementById('out');
 
 button.addEventListener('click', function () {
-    fetch('https://jsonplaceholder.typicode.com/posts')
+    fetch('https://jsonplaceholder.typicode.com/posts/99')
     .then(function (response) {
         return response.json();
     })
     .then(function (json) {
         let post = Post.FromRaw(json);
-        console.log(post);
+        div = post.renderFrom(div);
+        // console.log(post);
         // div.innerText = json.body;
         // div.innerText = Json.stringfy(json, null, 0);
     })
