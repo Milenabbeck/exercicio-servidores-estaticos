@@ -7,7 +7,7 @@ button.addEventListener('click', function () {
         return response.json();
     })
     .then(function (json) {
-        let post = new Post(json.userId, json.id, json.title, json.body);
+        let post = Post.FromRaw(json);
         console.log(post);
         // div.innerText = json.body;
         // div.innerText = Json.stringfy(json, null, 0);
